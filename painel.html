@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Painel — Dondokas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    main.container{max-width:1000px;margin:18px auto;padding:18px}
+    .admin-row{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:12px;border-radius:10px;background:#fff8ef;margin-bottom:10px}
+    .admin-left{flex:1}
+    .admin-actions{display:flex;gap:8px;align-items:center}
+    .small-muted{color:#6b5b52;font-size:13px}
+    .edit-input{padding:8px;border-radius:6px;border:1px solid #d2b48c}
+    .filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+  </style>
+</head>
+<body>
+  <header><div class="logo">💅 Dondokas — Painel</div></header>
+  <main class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div><strong>Agendamentos</strong><div class="small-muted">Todas as funcionárias têm acesso</div></div>
+      <div>
+        <button id="go-to-index" class="btn">Site público</button>
+        <button id="logout-btn" class="btn">Sair</button>
+      </div>
+    </div>
+
+    <div class="filter-row">
+      <input id="search" class="edit-input" placeholder="Pesquisar por nome, serviço ou profissional">
+      <select id="status-filter" class="edit-input">
+        <option value="">Todos status</option>
+        <option value="pending">Pendente</option>
+        <option value="confirmed">Confirmado</option>
+        <option value="cancelled">Cancelado</option>
+      </select>
+      <button id="clear-filter" class="btn">Limpar</button>
+    </div>
+
+    <div id="bookings-list"></div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
