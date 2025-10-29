@@ -1,0 +1,48 @@
+/* Tema Dondokas */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fdf8f2;
+  color: #5b3a1f;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #b98c5a;
+  color: white;
+  padding: 20px;
+  font-size: 1.8em;
+  letter-spacing: 2px;
+}
+
+main {
+  padding: 20px;
+}
+
+.service-card {
+  background-color: #fff6ec;
+  border: 1px solid #e6c89b;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(185, 140, 90, 0.3);
+}
+
+.service-card h2 {
+  color: #a17443;
+}
+
+button {
+  background-color: #a17443;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #c59b63;
+}
