@@ -1,75 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dondokas - Beleza e Estilo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dondokas — Agendamento</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <div class="logo">💅 Dondokas</div>
-    <nav>
-      <a href="#servicos">Serviços</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
-    </nav>
   </header>
 
-  <section class="hero">
-    <h1>Realce sua Beleza com Dondokas</h1>
-    <p>Especialistas em cuidados com unhas e cabelos. Estilo, elegância e você no centro de tudo!</p>
-  </section>
+  <main class="container">
+    <section class="hero">
+      <h1>Agende seu horário</h1>
+      <p>Escolha serviço, data e horário — a equipe confirmará em breve.</p>
+    </section>
 
-  <section id="servicos" class="servicos">
-    <h2>Nossos Serviços</h2>
-    <div class="servico-grid">
-      <div class="servico">
-        <h3>💅 Manicure</h3>
-        <p>Cuidados completos para suas unhas ficarem impecáveis.</p>
-      </div>
-      <div class="servico">
-        <h3>✨ Unha de Gel</h3>
-        <p>Durabilidade e brilho com acabamento natural.</p>
-      </div>
-      <div class="servico">
-        <h3>💧 Banho de Gel</h3>
-        <p>Fortalecimento e brilho intenso para suas unhas.</p>
-      </div>
-      <div class="servico">
-        <h3>🌸 Fibra de Vidro</h3>
-        <p>Unhas alongadas com aparência natural e resistência.</p>
-      </div>
-      <div class="servico">
-        <h3>🎀 Postiça Realista</h3>
-        <p>Unhas postiças com aparência natural e conforto.</p>
-      </div>
-      <div class="servico">
-        <h3>💇 Escova Simples</h3>
-        <p>Cabelos alinhados, soltos e com brilho.</p>
-      </div>
-      <div class="servico">
-        <h3>🌟 Mechas</h3>
-        <p>Ilumine seus fios com um toque de cor e estilo.</p>
-      </div>
-      <div class="servico">
-        <h3>🎨 Coloração</h3>
-        <p>Transforme seu visual com as melhores tonalidades.</p>
-      </div>
-    </div>
-  </section>
+    <section id="book">
+      <form id="booking-form">
+        <label>Nome</label>
+        <input id="name" type="text" placeholder="Seu nome" required>
 
-  <section id="sobre" class="sobre">
-    <h2>Sobre Nós</h2>
-    <p>
-      A Dondokas nasceu da paixão por realçar a beleza de cada mulher.  
-      Com profissionais dedicadas e produtos de alta qualidade, oferecemos um atendimento personalizado para que você se sinta única.
-    </p>
-  </section>
+        <label>Telefone</label>
+        <input id="phone" type="tel" placeholder="(99) 99999-9999">
 
-  <footer id="contato">
-    <p>📍 Dondokas Studio | 💌 contato@dondokas.com.br | 📱 (99) 99999-9999</p>
-    <p>&copy; 2025 Dondokas. Todos os direitos reservados.</p>
-  </footer>
+        <label>Serviço</label>
+        <select id="service" required>
+          <option value="">Selecione</option>
+        </select>
+
+        <label>Data e horário</label>
+        <input id="datetime" type="datetime-local" required>
+
+        <button type="submit" class="btn">Enviar agendamento</button>
+      </form>
+
+      <div id="result" style="margin-top:14px;color:green"></div>
+
+      <hr style="margin:24px 0">
+
+      <p class="small">Se você é da equipe, use o painel: <a href="admin.html">Painel do Salão</a></p>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
 </body>
 </html>
