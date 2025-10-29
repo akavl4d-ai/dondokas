@@ -1,162 +1,60 @@
-/* === Estilo principal do Dondokas === */
-
-:root {
-  --dourado: #d4af37;
-  --marrom: #5a3e2b;
-  --bege: #f5efe6;
-  --branco: #ffffff;
-}
-
-* {
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #f7efe3, #d2b48c);
+  color: #4b2e05;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
-body {
-  background-color: var(--bege);
-  color: var(--marrom);
-  line-height: 1.6;
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #fff8f0;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* ==== CABEÇALHO ==== */
-header {
-  background-color: var(--marrom);
-  color: var(--branco);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+.logo {
+  text-align: center;
+  color: #b8860b;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
-header .logo {
-  font-size: 1.8rem;
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #d2b48c;
+  font-size: 15px;
+}
+
+button {
+  background: #b8860b;
+  color: white;
+  border: none;
   font-weight: bold;
-  color: var(--dourado);
 }
 
-nav a {
-  color: var(--branco);
-  text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: 500;
-  transition: 0.3s;
+button:hover {
+  background: #d4af37;
 }
 
-nav a:hover {
-  color: var(--dourado);
+.hidden {
+  display: none;
 }
 
-/* ==== SEÇÃO HERO ==== */
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(to bottom, var(--bege), var(--branco));
+#listaAgendamentos {
+  list-style: none;
+  padding: 0;
 }
 
-.hero h1 {
-  color: var(--marrom);
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* ==== SERVIÇOS ==== */
-.servicos {
-  padding: 3rem 2rem;
-  text-align: center;
-  background-color: var(--branco);
-}
-
-.servicos h2 {
-  color: var(--marrom);
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.servicos h2::after {
-  content: "";
-  width: 80px;
-  height: 4px;
-  background-color: var(--dourado);
-  display: block;
-  margin: 0.5rem auto;
-  border-radius: 2px;
-}
-
-.servico-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.servico {
-  background-color: var(--bege);
-  border: 2px solid var(--dourado);
-  border-radius: 15px;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.servico:hover {
-  transform: translateY(-5px);
-  background-color: var(--dourado);
-  color: var(--marrom);
-}
-
-.servico h3 {
-  font-size: 1.3rem;
-  color: var(--marrom);
-  margin-bottom: 0.5rem;
-}
-
-.servico p {
-  font-size: 1rem;
-  color: #3d2b1f;
-}
-
-/* ==== SOBRE ==== */
-.sobre {
-  padding: 3rem 2rem;
-  text-align: center;
-  background-color: var(--bege);
-}
-
-.sobre h2 {
-  color: var(--marrom);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.sobre p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-}
-
-/* ==== RODAPÉ ==== */
-footer {
-  background-color: var(--marrom);
-  color: var(--branco);
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.95rem;
-}
-
-footer p {
-  margin: 0.3rem 0;
-}
-
-footer a {
-  color: var(--dourado);
-  text-decoration: none;
+#listaAgendamentos li {
+  background: #fff;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid #d2b48c;
 }
