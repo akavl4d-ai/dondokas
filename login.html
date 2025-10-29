@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Dondokas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .login-box{max-width:400px;margin:30px auto;padding:18px;background:#fff8f0;border-radius:12px}
+    label{display:block;margin:10px 0 4px}
+  </style>
+</head>
+<body>
+  <header><div class="logo">💅 Dondokas — Painel</div></header>
+  <main class="container">
+    <div class="login-box">
+      <h2>Entrar — Funcionárias</h2>
+      <div id="login-error" style="color:#c0392b"></div>
+      <form id="login-form">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="email@exemplo.com" required>
+        <label for="password">Senha</label>
+        <input id="password" type="password" placeholder="senha" required>
+        <button type="submit" class="btn">Entrar</button>
+      </form>
+      <p style="margin-top:12px;font-size:13px;color:#6b5b52">Use o login compartilhado fornecido.</p>
+    </div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
