@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dondokas - Agendamentos</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dondokas — Agendamento</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <h1 class="logo">💅 Dondokas</h1>
+  <header>
+    <div class="logo">💅 Dondokas</div>
+  </header>
 
-    <div id="login-section">
-      <h2>Login das Funcionárias</h2>
-      <input type="email" id="email" placeholder="E-mail" />
-      <input type="password" id="password" placeholder="Senha" />
-      <button id="login-btn">Entrar</button>
-      <p id="login-error"></p>
-    </div>
+  <main class="container">
+    <section class="hero">
+      <h1>Agende seu horário</h1>
+      <p>Escolha serviço, profissional, data e horário — nossa equipe confirma.</p>
+    </section>
 
-    <div id="agenda-section" class="hidden">
-      <h2>Agendamentos</h2>
+    <section id="book">
+      <form id="booking-form">
+        <label>Nome</label>
+        <input id="name" type="text" placeholder="Seu nome" required>
 
-      <form id="appointment-form">
-        <input type="text" id="nomeCliente" placeholder="Nome do cliente" required />
-        <select id="servico" required>
-          <option value="">Selecione o serviço</option>
+        <label>Telefone</label>
+        <input id="phone" type="tel" placeholder="(99) 99999-9999">
+
+        <label>Serviço</label>
+        <select id="service" required>
+          <option value="">Selecione</option>
           <option>Manicure</option>
           <option>Unha de Gel</option>
           <option>Banho de Gel</option>
@@ -34,16 +37,26 @@
           <option>Mechas</option>
           <option>Coloração</option>
         </select>
-        <input type="datetime-local" id="dataHorario" required />
-        <button type="submit">Agendar</button>
+
+        <label>Profissional</label>
+        <select id="professional" required>
+          <option value="">Selecione</option>
+          <!-- options populated by app.js -->
+        </select>
+
+        <label>Data e horário</label>
+        <input id="datetime" type="datetime-local" required>
+
+        <button type="submit" class="btn">Enviar agendamento</button>
       </form>
 
-      <h3>Lista de Agendamentos</h3>
-      <ul id="listaAgendamentos"></ul>
+      <div id="result" style="margin-top:14px;color:green"></div>
 
-      <button id="logout-btn">Sair</button>
-    </div>
-  </div>
+      <hr style="margin:24px 0">
+
+      <p class="small">Equipe? <a href="login.html">Entrar no painel</a></p>
+    </section>
+  </main>
 
   <script type="module" src="app.js"></script>
 </body>
